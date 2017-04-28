@@ -1,0 +1,18 @@
+ #LISTAR LOS PRODUCTOS
+ 
+ <?php
+        require_once "model/Data.php";
+
+        $d = new Data();        
+
+        $productos = $d->getProductos();
+
+
+       // foreach ($p as $key => $value){ //VIDEO 5 MIN 1:10
+        foreach ($productos as $p){
+            echo $p->id." - ".$p->nombre." - ".$p->precio." - ".$p->stock;
+            echo "<br>";
+
+
+        }
+        ?>
